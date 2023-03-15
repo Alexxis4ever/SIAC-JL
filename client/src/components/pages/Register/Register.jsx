@@ -95,7 +95,7 @@ export default function Register() {
       <section className="sectionRight">
         <NavBar style="navBarRegister" />
       
-        <section className="form">
+        <section className="formRegister">
           <section className="heading">
               <div className="containerIcon">
                 <ImgUI style="imgLogoRegister" routeImg={logo} />

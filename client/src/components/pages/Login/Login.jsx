@@ -81,7 +81,7 @@ function Login() {
 
         <NavBar style='navBarLogin' />
 
-        <section className="form">
+        <section className="formLogin">
           <section className="heading">
             <div className="containerIcon">
               <ImgUI style="imgLogoLogin" routeImg={logo} />
@@ -120,7 +120,7 @@ function Login() {
               </button>
 
 
-              <Link className='info-register' to="/register"> ¿No tienes una cuenta?  Registrarse</Link>
+              <p className='register'>¿No tienes una cuenta?<Link className='info-register' to="/register">Registrarse</Link></p>
             </div>
             
             <Link className='recover-password' to="/forgot-password"> Has olvidado tu contraseña</Link>
