@@ -1,15 +1,14 @@
 import { useState, useEffect } from 'react'
-import { FaSignInAlt } from 'react-icons/fa'
+
 import { useSelector, useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import {login,reset} from '../../features/auth/authSlice'
-import { Spinner } from '../../layouts/Spinner/Spinner'
 import { Link } from 'react-router-dom'
 // UI
 import { ImgUI } from '../../UI/ImgUI/ImgUI'
 import { ImgLeft } from "../../UI/ImgLeft/ImgLeft";
-import { NavBar } from "../../UI/NavBar/NavBar";
+import { NavBarSession } from "../../UI/NavBarSession/NavBarSession";
 
 // IMG
 import logoLogin from "../../../Images/heroBg.png";
@@ -29,7 +28,7 @@ function Login() {
     const navigate = useNavigate()
     const dispatch = useDispatch()
   
-    const { user, isLoading, isError, isSuccess, message } = useSelector(
+    const { user, isError, isSuccess, message } = useSelector(
       (state) => state.auth
     )
   
@@ -63,9 +62,6 @@ function Login() {
       dispatch(login(userData))
     }
   
-    if (isLoading) {
-      return <Spinner />
-    }
     
 
  
@@ -79,7 +75,7 @@ function Login() {
 
       <section className="sectionRight">
 
-        <NavBar style='navBarLogin' />
+        <NavBarSession style='navBarLogin' />
 
         <section className="formLogin">
           <section className="heading">

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
-export const NavBar = ({style}) => {
+export const NavBarSession = ({style}) => {
 
     const location = useLocation();
     const [activeLink, setActiveLink] = useState(location.pathname);

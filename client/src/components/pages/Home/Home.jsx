@@ -1,11 +1,9 @@
 import React from 'react'
-import { Main } from '../../layouts/Main/Main'
+import { MainHome } from '../../layouts/MainHome/MainHome'
 
 
 export const Home = () => {
   return (
-    <>
-     <Main />
-    </>
+     <MainHome />
   )
 }

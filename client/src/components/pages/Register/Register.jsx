@@ -1,25 +1,20 @@
 import  { useState,useEffect } from 'react'
-import { FaUser } from 'react-icons/fa'
 import {useSelector, useDispatch} from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import {toast} from "react-toastify"
 import {register,reset} from '../../features/auth/authSlice'
-import { Spinner } from '../../layouts/Spinner/Spinner'
+
 
 // UI
-import { NavBar } from "../../UI/NavBar/NavBar";
+import { NavBarSession } from "../../UI/NavBarSession/NavBarSession";
 import { ImgLeft } from "../../UI/ImgLeft/ImgLeft";
 import { ImgUI } from "../../UI/ImgUI/ImgUI";
-
-
 
 
 // Images
 import logo from "../../../Images/logo.png";
 import logoLogin from "../../../Images/heroBg.png";
 import logoOrder from "../../../Images/Exclude.png"
-
-
 
 
 
@@ -37,11 +32,10 @@ export default function Register() {
     const navigate = useNavigate()
     const dispatch = useDispatch()
  
-     const { user, isLoading, isError, isSuccess, message } = useSelector(
+     const { user, isError, isSuccess, message } = useSelector(
     (state) => state.auth
   )
   
-
 
   useEffect(() => {
     if (isError) {
@@ -80,11 +74,7 @@ export default function Register() {
     }
   }
 
-  if (isLoading) {
-    return <Spinner />
-  }
     
-
   return (
     <div className="containerPrincipal">
         <section className='sectionLeft'>
@@ -93,7 +83,7 @@ export default function Register() {
         </section>
 
       <section className="sectionRight">
-        <NavBar style="navBarRegister" />
+        <NavBarSession style="navBarRegister" />
       
         <section className="formRegister">
           <section className="heading">
